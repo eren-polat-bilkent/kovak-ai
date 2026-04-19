@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geçmiş - KovakAI</title>
+    <title>Geçmiş - CyberShieldAI</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/history.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,7 +24,7 @@
                 <div class="logo-icon">
                     <i class="fas fa-shield-halved"></i>
                 </div>
-                <span>KovakAI</span>
+                <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
@@ -153,7 +153,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-                <p>&copy; 2026 KovakAI. Tüm hakları saklıdır.</p>
+                <p>&copy; 2026 CyberShieldAI. Tüm hakları saklıdır.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>
@@ -167,7 +167,7 @@
     <script>
         // Update stats
         function updateStats() {
-            const history = JSON.parse(localStorage.getItem('kovakHistory') || '[]');
+            const history = JSON.parse(localStorage.getItem('cybershieldHistory') || '[]');
             
             document.getElementById('totalScans').textContent = history.length;
             document.getElementById('highRiskCount').textContent = history.filter(h => h.riskScore > 60).length;

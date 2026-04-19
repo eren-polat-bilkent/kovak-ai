@@ -1,14 +1,14 @@
-# KovakAI - Yapay Zeka İçerik Tespit Platformu
+# CyberShieldAI - Yapay Zeka İçerik Tespit Platformu
 
-![KovakAI](https://img.shields.io/badge/KovakAI-Tespit%20Platformu-6366f1?style=for-the-badge)
+![CyberShieldAI](https://img.shields.io/badge/CyberShieldAI-Tespit%20Platformu-6366f1?style=for-the-badge)
 
 Deepfake ve yapay zeka ile üretilmiş içerikleri tespit eden web platformu.
 
 ## Demo
 
-**[Canlı Demo →](https://kovaktech.github.io/kovak-ai)**
+**[Canlı Demo →](https://cybershieldai.github.io/cybershield-ai)**
 
-🌐 **Web Sitesi:** https://kovaktech.github.io/kovak-ai
+🌐 **Web Sitesi:** https://cybershieldai.github.io/cybershield-ai
 
 ## Özellikler
 

@@ -505,7 +505,7 @@ function generateSignals(fileType, riskScore) {
 }
 
 function saveToHistory(file, fileType, riskScore, label, signals) {
-    const history = JSON.parse(localStorage.getItem('kovakHistory') || '[]');
+    const history = JSON.parse(localStorage.getItem('cybershieldHistory') || '[]');
     
     history.unshift({
         id: Date.now(),
@@ -521,7 +521,7 @@ function saveToHistory(file, fileType, riskScore, label, signals) {
     // Keep only last 50
     if (history.length > 50) history.pop();
     
-    localStorage.setItem('kovakHistory', JSON.stringify(history));
+    localStorage.setItem('cybershieldHistory', JSON.stringify(history));
 }
 
 function resetAnalysis() {
@@ -539,7 +539,7 @@ function loadHistory() {
     
     if (!historyList) return;
 
-    const history = JSON.parse(localStorage.getItem('kovakHistory') || '[]');
+    const history = JSON.parse(localStorage.getItem('cybershieldHistory') || '[]');
 
     if (history.length === 0) {
         emptyState.style.display = 'block';
@@ -587,7 +587,7 @@ function getScoreClass(score) {
 
 function clearHistory() {
     if (confirm('Tüm geçmişi silmek istediğinizden emin misiniz?')) {
-        localStorage.removeItem('kovakHistory');
+        localStorage.removeItem('cybershieldHistory');
         loadHistory();
     }
 }
@@ -662,7 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHistory();
     
     // Add some demo history if empty
-    const history = JSON.parse(localStorage.getItem('kovakHistory') || '[]');
+    const history = JSON.parse(localStorage.getItem('cybershieldHistory') || '[]');
     if (history.length === 0 && window.location.pathname.includes('history')) {
         // Add demo data
         const demoData = [
@@ -681,7 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        localStorage.setItem('kovakHistory', JSON.stringify(history));
+        localStorage.setItem('cybershieldHistory', JSON.stringify(history));
         loadHistory();
     }
 });
