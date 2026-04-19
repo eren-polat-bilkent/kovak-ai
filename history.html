@@ -13,7 +13,7 @@
     <!-- Demo Disclaimer Banner -->
     <div class="demo-banner" id="demoBanner">
         <i class="fas fa-flask"></i>
-        <span><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
+        <span data-i18n="banner.text"><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
         <button class="banner-close" id="bannerClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     </div>
 
@@ -27,11 +27,14 @@
                 <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="analyze.html">Analiz</a>
-                <a href="history.html" class="active">Geçmiş</a>
-                <a href="api.html" class="nav-btn">API Anahtarı Al</a>
+                <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+                <a href="analyze.html" data-i18n="nav.analyze">Analiz</a>
+                <a href="history.html" class="active" data-i18n="nav.history">Geçmiş</a>
+                <a href="api.html" class="nav-btn" data-i18n="nav.api">API Anahtarı Al</a>
             </div>
+            <button class="lang-toggle" id="langToggle">
+                <span>TR</span>
+            </button>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
@@ -43,17 +46,17 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="header-content">
-                    <h1>Analiz Geçmişi</h1>
-                    <p>Geçmiş analizlerinizi görüntüleyin ve yönetin</p>
+                    <h1 data-i18n="history.title">Analiz Geçmişi</h1>
+                    <p data-i18n="history.subtitle">Geçmiş analizlerinizi görüntüleyin ve yönetin</p>
                 </div>
                 <div class="header-actions">
                     <button class="btn btn-secondary" onclick="clearHistory()">
                         <i class="fas fa-trash"></i>
-                        Tümünü Temizle
+                        <span data-i18n="history.clearAll">Tümünü Temizle</span>
                     </button>
                     <a href="analyze.html" class="btn btn-primary">
                         <i class="fas fa-plus"></i>
-                        Yeni Analiz
+                        <span data-i18n="history.newAnalysis">Yeni Analiz</span>
                     </a>
                 </div>
             </div>
@@ -62,28 +65,28 @@
             <div class="filters-bar">
                 <div class="filters-left">
                     <div class="filter-group">
-                        <label>Tür</label>
+                        <label data-i18n="history.type">Tür</label>
                         <select id="filterType">
-                            <option value="all">Tüm Türler</option>
-                            <option value="audio">Ses</option>
-                            <option value="video">Video</option>
-                            <option value="image">Görsel</option>
+                            <option value="all" data-i18n="history.allTypes">Tüm Türler</option>
+                            <option value="audio" data-i18n="analyze.audio">Ses</option>
+                            <option value="video" data-i18n="analyze.video">Video</option>
+                            <option value="image" data-i18n="analyze.image">Görsel</option>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label>Risk Seviyesi</label>
+                        <label data-i18n="history.riskLevel">Risk Seviyesi</label>
                         <select id="filterRisk">
-                            <option value="all">Tüm Seviyeler</option>
-                            <option value="low">Düşük (0-30)</option>
-                            <option value="medium">Orta (31-60)</option>
-                            <option value="high">Yüksek (61-100)</option>
+                            <option value="all" data-i18n="history.allLevels">Tüm Seviyeler</option>
+                            <option value="low" data-i18n="history.low">Düşük (0-30)</option>
+                            <option value="medium" data-i18n="history.medium">Orta (31-60)</option>
+                            <option value="high" data-i18n="history.high">Yüksek (61-100)</option>
                         </select>
                     </div>
                 </div>
                 <div class="filters-right">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="Dosya ara...">
+                        <input type="text" id="searchInput" placeholder="Dosya ara..." data-i18n-placeholder="history.search">
                     </div>
                 </div>
             </div>
@@ -96,7 +99,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="totalScans">0</span>
-                        <span class="stat-label">Toplam Tarama</span>
+                        <span class="stat-label" data-i18n="history.totalScans">Toplam Tarama</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -105,7 +108,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="highRiskCount">0</span>
-                        <span class="stat-label">Yüksek Risk</span>
+                        <span class="stat-label" data-i18n="history.highRisk">Yüksek Risk</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -114,7 +117,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="safeCount">0</span>
-                        <span class="stat-label">Muhtemelen Güvenli</span>
+                        <span class="stat-label" data-i18n="history.safe">Muhtemelen Güvenli</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -123,7 +126,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="avgScore">0</span>
-                        <span class="stat-label">Ort. Risk Skoru</span>
+                        <span class="stat-label" data-i18n="history.avgScore">Ort. Risk Skoru</span>
                     </div>
                 </div>
             </div>
@@ -138,11 +141,11 @@
                     <div class="empty-icon">
                         <i class="fas fa-inbox"></i>
                     </div>
-                    <h3>Analiz Geçmişi Yok</h3>
-                    <p>Geçmişinizi görmek için dosya analiz etmeye başlayın</p>
+                    <h3 data-i18n="history.noHistory">Analiz Geçmişi Yok</h3>
+                    <p data-i18n="history.noHistoryDesc">Geçmişinizi görmek için dosya analiz etmeye başlayın</p>
                     <a href="analyze.html" class="btn btn-primary">
                         <i class="fas fa-upload"></i>
-                        İlk Dosyayı Analiz Et
+                        <span data-i18n="history.firstFile">İlk Dosyayı Analiz Et</span>
                     </a>
                 </div>
             </div>
@@ -153,7 +156,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-                <p>&copy; 2026 CyberShieldAI. Tüm hakları saklıdır.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 CyberShieldAI. Tüm hakları saklıdır.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>

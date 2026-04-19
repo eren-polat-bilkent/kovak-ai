@@ -83,7 +83,7 @@
     <!-- Demo Disclaimer Banner -->
     <div class="demo-banner" id="demoBanner">
         <i class="fas fa-flask"></i>
-        <span><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
+        <span data-i18n="banner.text"><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
         <button class="banner-close" id="bannerClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     </div>
 
@@ -97,11 +97,14 @@
                 <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="analyze.html">Analiz</a>
-                <a href="history.html">Geçmiş</a>
-                <a href="api.html" class="nav-btn">API Anahtarı Al</a>
+                <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+                <a href="analyze.html" data-i18n="nav.analyze">Analiz</a>
+                <a href="history.html" data-i18n="nav.history">Geçmiş</a>
+                <a href="api.html" class="nav-btn" data-i18n="nav.api">API Anahtarı Al</a>
             </div>
+            <button class="lang-toggle" id="langToggle">
+                <span>TR</span>
+            </button>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
@@ -111,20 +114,20 @@
     <section class="info-page">
         <div class="info-card">
             <div class="info-icon">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fas fa-envelope"></i>
             </div>
-            <h1>İletişim</h1>
-            <p>
-                CyberShieldAI ekibiyle iletişime geçmek, iş birliği fırsatlarını değerlendirmek veya kariyer başvurusu yapmak için LinkedIn sayfamızı ziyaret edin.
+            <h1 data-i18n="contact.title">İletişim</h1>
+            <p data-i18n="contact.desc">
+                CyberShieldAI ekibiyle iletişime geçmek, iş birliği fırsatlarını değerlendirmek veya sorularınızı iletmek için bize ulaşın.
             </p>
-            <a href="https://www.linkedin.com/company/cybershieldai" target="_blank" rel="noopener" class="linkedin-btn">
+            <a href="#" class="linkedin-btn">
                 <i class="fab fa-linkedin-in"></i>
-                LinkedIn'de Takip Et
+                <span data-i18n="contact.linkedin">LinkedIn</span>
             </a>
             <br>
             <a href="index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i>
-                Ana Sayfaya Dön
+                <span data-i18n="api.back">Ana Sayfaya Dön</span>
             </a>
         </div>
     </section>

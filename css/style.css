@@ -332,6 +332,32 @@ img {
     color: var(--text-primary);
 }
 
+/* Language Toggle */
+.lang-toggle {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.lang-toggle:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+
+.lang-toggle.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
 /* ===== Hero Section ===== */
 .hero {
     min-height: 100vh;

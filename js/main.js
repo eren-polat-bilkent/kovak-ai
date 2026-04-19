@@ -1,3 +1,403 @@
+// ===== Translations =====
+const translations = {
+    tr: {
+        // Navigation
+        'nav.home': 'Ana Sayfa',
+        'nav.analyze': 'Analiz',
+        'nav.history': 'Geçmiş',
+        'nav.api': 'API Anahtarı Al',
+        
+        // Hero
+        'hero.title1': 'Yapay Zeka Üretimi',
+        'hero.title2': 'İçerikleri Tespit Edin',
+        'hero.subtitle': 'Deepfake videoları, ses klonlamayı, yapay zeka ile üretilmiş görselleri ve sentetik metinleri yüksek doğruluk oranıyla tespit edin. Dijital manipülasyonlara karşı korunun.',
+        'hero.cta': 'Analiz Başlat',
+        'hero.accuracy': '% Doğruluk',
+        'hero.speed': 'sn Ort. Hız',
+        'hero.scanned': 'K+ Dosya Tarandı',
+        
+        // Demo
+        'demo.riskScore': 'Risk Skoru',
+        'demo.signal1': 'Yüz manipülasyonu tespit edildi',
+        'demo.signal2': 'Doğal olmayan göz hareketi',
+        
+        // Features
+        'features.badge': 'Özellikler',
+        'features.title': 'Her Tür <span class="gradient-text">Yapay Zeka Manipülasyonunu</span> Tespit Edin',
+        'features.subtitle': 'Çoklu ortam tespit motorumuz ses, video, görsel ve metinleri en güncel modellerle analiz eder.',
+        'features.audio.title': 'Ses Deepfake',
+        'features.audio.desc': 'Ses klonlama, sentetik konuşma ve ses manipülasyonlarını spektral analiz ile tespit edin.',
+        'features.audio.item1': 'Ses klonlama tespiti',
+        'features.audio.item2': 'Sentetik konuşma tanıma',
+        'features.audio.item3': 'Ses birleştirme tespiti',
+        'features.video.badge': 'En Popüler',
+        'features.video.title': 'Video Deepfake',
+        'features.video.desc': 'Yüz değiştirme, dudak senkronizasyonu ve sentetik video tespiti için kare kare analiz.',
+        'features.video.item1': 'Yüz değiştirme tespiti',
+        'features.video.item2': 'Zamansal tutarlılık kontrolü',
+        'features.video.item3': 'GAN artifakt tespiti',
+        'features.image.title': 'Yapay Zeka Görselleri',
+        'features.image.desc': 'DALL-E, Stable Diffusion, Midjourney ve diğer yapay zeka modelleriyle üretilen görselleri tespit edin.',
+        'features.image.item1': 'Diffusion model imzaları',
+        'features.image.item2': 'GAN artifakt tespiti',
+        'features.image.item3': 'Manipülasyon bölgesi haritalama',
+        'features.text.title': 'Yapay Zeka Metni',
+        'features.text.desc': 'ChatGPT, Claude ve diğer büyük dil modelleri tarafından üretilen içerikleri tespit edin.',
+        'features.text.item1': 'Perplexity analizi',
+        'features.text.item2': 'Stilometrik örüntü analizi',
+        'features.text.item3': 'Cümle bazlı puanlama',
+        'features.accuracy': 'Doğruluk',
+        
+        // How it works
+        'how.badge': 'Süreç',
+        'how.title': 'Nasıl <span class="gradient-text">Çalışır</span>',
+        'how.subtitle': 'İçerik doğruluğunu doğrulamak için üç basit adım',
+        'how.step1.title': 'Yükle',
+        'how.step1.desc': 'Dosyanızı sürükleyip bırakın veya seçin. Ses, video, görsel ve metin desteği.',
+        'how.step2.title': 'Analiz Et',
+        'how.step2.desc': 'Yapay zeka modellerimiz içeriğinizi gelişmiş tespit algoritmalarıyla işler.',
+        'how.step3.title': 'Sonuçlar',
+        'how.step3.desc': 'Detaylı risk skorları, anahtar sinyaller ve dışa aktarma seçenekleri.',
+        
+        // CTA
+        'cta.title': 'Yapay Zeka İçeriklerini Tespit Etmeye Hazır mısınız?',
+        'cta.subtitle': 'Ücretsiz analiz yapmaya başlayın. Kredi kartı gerekmez.',
+        'cta.button': 'Hemen Dene',
+        
+        // Footer
+        'footer.tagline': 'Modern dünya için kurumsal düzeyde yapay zeka içerik tespiti.',
+        'footer.product': 'Ürün',
+        'footer.resources': 'Kaynaklar',
+        'footer.docs': 'Dokümantasyon',
+        'footer.blog': 'Blog',
+        'footer.research': 'Araştırma',
+        'footer.company': 'Şirket',
+        'footer.about': 'Hakkımızda',
+        'footer.contact': 'İletişim',
+        'footer.careers': 'Kariyer',
+        'footer.copyright': '© 2026 CyberShieldAI. Tüm hakları saklıdır.',
+        'footer.pricing': 'Fiyatlandırma',
+        
+        // Banner
+        'banner.text': '<strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.',
+        
+        // Analyze page
+        'analyze.title': 'İçerik Analizi',
+        'analyze.subtitle': 'Yapay zeka üretimi içerikleri tespit etmek için ses, video veya görsel yükleyin',
+        'analyze.upload': 'Dosya Yükle',
+        'analyze.text': 'Metin Analizi',
+        'analyze.url': "URL'den",
+        'analyze.dropzone': 'Dosyanızı buraya sürükleyin',
+        'analyze.browse': 'veya seçmek için tıklayın',
+        'analyze.audio': 'Ses',
+        'analyze.video': 'Video',
+        'analyze.image': 'Görsel',
+        'analyze.limits': 'Maks dosya boyutu: 100MB • Desteklenen: MP3, WAV, MP4, MOV, JPG, PNG, WEBP',
+        'analyze.result': 'Tespit Sonucu',
+        'analyze.riskScore': 'Risk Skoru',
+        'analyze.confidence': 'Model Güvenilirliği',
+        'analyze.signals': 'Anahtar Sinyaller',
+        'analyze.detected': 'tespit edildi',
+        'analyze.download': 'Raporu İndir',
+        'analyze.share': 'Paylaş',
+        'analyze.new': 'Yeni Analiz',
+        'analyze.noResult': 'Henüz Sonuç Yok',
+        'analyze.noResultDesc': 'Analiz sonuçlarını görmek için bir dosya yükleyin',
+        'analyze.pasteText': 'Analiz Edilecek Metni Yapıştırın',
+        'analyze.textPlaceholder': 'Yapay zeka üretimi olup olmadığını analiz etmek istediğiniz metni buraya yapıştırın...',
+        'analyze.chars': 'karakter',
+        'analyze.analyzeText': 'Metni Analiz Et',
+        'analyze.textResult': 'Metin Analiz Sonucu',
+        'analyze.aiProb': 'YZ Olasılığı',
+        'analyze.sentenceAnalysis': 'Cümle Analizi',
+        'analyze.highAI': 'Yüksek YZ',
+        'analyze.mediumAI': 'Orta',
+        'analyze.lowAI': 'Düşük YZ',
+        'analyze.urlTitle': "URL'den Analiz Et",
+        'analyze.urlDesc': 'Ses, video veya görsel dosyasına doğrudan bağlantı girin',
+        'analyze.sources': 'Desteklenen kaynaklar:',
+        'analyze.directLink': 'Doğrudan Link',
+        
+        // History page
+        'history.title': 'Analiz Geçmişi',
+        'history.subtitle': 'Geçmiş analizlerinizi görüntüleyin ve yönetin',
+        'history.clearAll': 'Tümünü Temizle',
+        'history.newAnalysis': 'Yeni Analiz',
+        'history.type': 'Tür',
+        'history.allTypes': 'Tüm Türler',
+        'history.riskLevel': 'Risk Seviyesi',
+        'history.allLevels': 'Tüm Seviyeler',
+        'history.low': 'Düşük (0-30)',
+        'history.medium': 'Orta (31-60)',
+        'history.high': 'Yüksek (61-100)',
+        'history.search': 'Dosya ara...',
+        'history.totalScans': 'Toplam Tarama',
+        'history.highRisk': 'Yüksek Risk',
+        'history.safe': 'Muhtemelen Güvenli',
+        'history.avgScore': 'Ort. Risk Skoru',
+        'history.noHistory': 'Analiz Geçmişi Yok',
+        'history.noHistoryDesc': 'Geçmişinizi görmek için dosya analiz etmeye başlayın',
+        'history.firstFile': 'İlk Dosyayı Analiz Et',
+        
+        // API page
+        'api.badge': 'Beta Yakında',
+        'api.title': 'API Hizmeti',
+        'api.desc1': 'Beta sürümü yakın zamanda aktif olacaktır.',
+        'api.desc2': 'REST tabanlı API altyapımız; ses, video, görsel ve metin analizi için ayrı endpoint\'ler, detaylı dokümantasyon ve SDK desteği ile geliştiricilere sunulacaktır.',
+        'api.back': 'Ana Sayfaya Dön',
+        
+        // Pricing page
+        'pricing.badge': 'Yakında',
+        'pricing.title': 'Fiyatlandırma',
+        'pricing.desc1': 'Kurumsal ve bireysel kullanıcılara özel planlar yakında sunulacaktır.',
+        'pricing.desc2': '<strong>API Tabanlı:</strong> Kullanım bazlı fiyatlandırma, kurumsal hacim indirimleri ve özel SLA seçenekleri.<br><strong>Uygulama Tabanlı:</strong> Bireysel kullanıcılar için freemium model, gelişmiş özellikler için aylık/yıllık abonelik paketleri.',
+        'pricing.desc3': 'Detaylı fiyat bilgisi ve erken erişim fırsatları için bizi takip edin.',
+        
+        // About page
+        'about.title': 'Ekibimiz',
+        'about.university': 'Bilkent Üniversitesi',
+        'about.desc1': 'CyberShieldAI, Bilkent Üniversitesi Elektrik-Elektronik Mühendisliği bölümünde öğrenim gören üç 4. sınıf mühendislik öğrencisi tarafından geliştirilen, ürünleşme ve ticarileşme odaklı bir girişim projesidir.',
+        'about.desc2': 'Ekibimiz; yapay zekâ, makine öğrenmesi, sinyal işleme ve bilgisayar ağları alanlarında araştırma ve geliştirme çalışmaları yürütmektedir.',
+        'about.desc3': 'Akademik altyapımızı, gerçek dünyada karşılaşılan problemlere doğrudan karşılık verebilen, uygulanabilir ve sürdürülebilir mühendislik çözümlerine dönüştürmeyi hedefliyoruz.',
+        'about.desc4': 'Erken aşamadan itibaren ürün geliştirme, hızlı prototipleme ve teknik demo oluşturma süreçlerinde aktif olarak yer aldık. CyberShieldAI, yapay zekâ kaynaklı yanıltıcı içeriklere karşı güvenilir, şeffaf ve doğrulanabilir çözümler geliştirmeyi amaçlayan; teknik derinliği uygulama odağıyla birleştiren bir yaklaşım üzerine inşa edilmektedir.',
+        'about.teamMembers': 'Ekip Üyesi',
+        'about.department': 'Bölüm',
+        'about.graduation': 'Mezuniyet',
+        
+        // Contact page
+        'contact.title': 'İletişim',
+        'contact.desc': 'CyberShieldAI ekibiyle iletişime geçmek, iş birliği fırsatlarını değerlendirmek veya sorularınızı iletmek için bize ulaşın.',
+        'contact.linkedin': 'LinkedIn'
+    },
+    en: {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.analyze': 'Analyze',
+        'nav.history': 'History',
+        'nav.api': 'Get API Key',
+        
+        // Hero
+        'hero.title1': 'AI-Generated',
+        'hero.title2': 'Content Detection',
+        'hero.subtitle': 'Detect deepfake videos, voice cloning, AI-generated images, and synthetic text with high accuracy. Protect yourself against digital manipulation.',
+        'hero.cta': 'Start Analysis',
+        'hero.accuracy': '% Accuracy',
+        'hero.speed': 's Avg. Speed',
+        'hero.scanned': 'K+ Files Scanned',
+        
+        // Demo
+        'demo.riskScore': 'Risk Score',
+        'demo.signal1': 'Face manipulation detected',
+        'demo.signal2': 'Unnatural eye movement',
+        
+        // Features
+        'features.badge': 'Features',
+        'features.title': 'Detect All Types of <span class="gradient-text">AI Manipulation</span>',
+        'features.subtitle': 'Our multi-media detection engine analyzes audio, video, images, and text with cutting-edge models.',
+        'features.audio.title': 'Audio Deepfake',
+        'features.audio.desc': 'Detect voice cloning, synthetic speech, and audio manipulation with spectral analysis.',
+        'features.audio.item1': 'Voice cloning detection',
+        'features.audio.item2': 'Synthetic speech recognition',
+        'features.audio.item3': 'Audio splicing detection',
+        'features.video.badge': 'Most Popular',
+        'features.video.title': 'Video Deepfake',
+        'features.video.desc': 'Frame-by-frame analysis for face swapping, lip sync, and synthetic video detection.',
+        'features.video.item1': 'Face swap detection',
+        'features.video.item2': 'Temporal consistency check',
+        'features.video.item3': 'GAN artifact detection',
+        'features.image.title': 'AI Images',
+        'features.image.desc': 'Detect images generated by DALL-E, Stable Diffusion, Midjourney, and other AI models.',
+        'features.image.item1': 'Diffusion model signatures',
+        'features.image.item2': 'GAN artifact detection',
+        'features.image.item3': 'Manipulation region mapping',
+        'features.text.title': 'AI Text',
+        'features.text.desc': 'Detect content generated by ChatGPT, Claude, and other large language models.',
+        'features.text.item1': 'Perplexity analysis',
+        'features.text.item2': 'Stylometric pattern analysis',
+        'features.text.item3': 'Sentence-level scoring',
+        'features.accuracy': 'Accuracy',
+        
+        // How it works
+        'how.badge': 'Process',
+        'how.title': 'How It <span class="gradient-text">Works</span>',
+        'how.subtitle': 'Three simple steps to verify content authenticity',
+        'how.step1.title': 'Upload',
+        'how.step1.desc': 'Drag and drop or select your file. Audio, video, image, and text support.',
+        'how.step2.title': 'Analyze',
+        'how.step2.desc': 'Our AI models process your content with advanced detection algorithms.',
+        'how.step3.title': 'Results',
+        'how.step3.desc': 'Detailed risk scores, key signals, and export options.',
+        
+        // CTA
+        'cta.title': 'Ready to Detect AI Content?',
+        'cta.subtitle': 'Start analyzing for free. No credit card required.',
+        'cta.button': 'Try Now',
+        
+        // Footer
+        'footer.tagline': 'Enterprise-grade AI content detection for the modern world.',
+        'footer.product': 'Product',
+        'footer.resources': 'Resources',
+        'footer.docs': 'Documentation',
+        'footer.blog': 'Blog',
+        'footer.research': 'Research',
+        'footer.company': 'Company',
+        'footer.about': 'About Us',
+        'footer.contact': 'Contact',
+        'footer.careers': 'Careers',
+        'footer.copyright': '© 2026 CyberShieldAI. All rights reserved.',
+        'footer.pricing': 'Pricing',
+        
+        // Banner
+        'banner.text': '<strong>Demo:</strong> Models may make mistakes. Please verify results independently.',
+        
+        // Analyze page
+        'analyze.title': 'Content Analysis',
+        'analyze.subtitle': 'Upload audio, video, or image to detect AI-generated content',
+        'analyze.upload': 'Upload File',
+        'analyze.text': 'Text Analysis',
+        'analyze.url': 'From URL',
+        'analyze.dropzone': 'Drag your file here',
+        'analyze.browse': 'or click to browse',
+        'analyze.audio': 'Audio',
+        'analyze.video': 'Video',
+        'analyze.image': 'Image',
+        'analyze.limits': 'Max file size: 100MB • Supported: MP3, WAV, MP4, MOV, JPG, PNG, WEBP',
+        'analyze.result': 'Detection Result',
+        'analyze.riskScore': 'Risk Score',
+        'analyze.confidence': 'Model Confidence',
+        'analyze.signals': 'Key Signals',
+        'analyze.detected': 'detected',
+        'analyze.download': 'Download Report',
+        'analyze.share': 'Share',
+        'analyze.new': 'New Analysis',
+        'analyze.noResult': 'No Results Yet',
+        'analyze.noResultDesc': 'Upload a file to see analysis results',
+        'analyze.pasteText': 'Paste Text to Analyze',
+        'analyze.textPlaceholder': 'Paste the text you want to analyze for AI generation here...',
+        'analyze.chars': 'characters',
+        'analyze.analyzeText': 'Analyze Text',
+        'analyze.textResult': 'Text Analysis Result',
+        'analyze.aiProb': 'AI Probability',
+        'analyze.sentenceAnalysis': 'Sentence Analysis',
+        'analyze.highAI': 'High AI',
+        'analyze.mediumAI': 'Medium',
+        'analyze.lowAI': 'Low AI',
+        'analyze.urlTitle': 'Analyze from URL',
+        'analyze.urlDesc': 'Enter a direct link to audio, video, or image file',
+        'analyze.sources': 'Supported sources:',
+        'analyze.directLink': 'Direct Link',
+        
+        // History page
+        'history.title': 'Analysis History',
+        'history.subtitle': 'View and manage your past analyses',
+        'history.clearAll': 'Clear All',
+        'history.newAnalysis': 'New Analysis',
+        'history.type': 'Type',
+        'history.allTypes': 'All Types',
+        'history.riskLevel': 'Risk Level',
+        'history.allLevels': 'All Levels',
+        'history.low': 'Low (0-30)',
+        'history.medium': 'Medium (31-60)',
+        'history.high': 'High (61-100)',
+        'history.search': 'Search files...',
+        'history.totalScans': 'Total Scans',
+        'history.highRisk': 'High Risk',
+        'history.safe': 'Likely Safe',
+        'history.avgScore': 'Avg. Risk Score',
+        'history.noHistory': 'No Analysis History',
+        'history.noHistoryDesc': 'Start analyzing files to see your history',
+        'history.firstFile': 'Analyze First File',
+        
+        // API page
+        'api.badge': 'Beta Coming Soon',
+        'api.title': 'API Service',
+        'api.desc1': 'Beta version will be available soon.',
+        'api.desc2': 'Our REST-based API infrastructure will be offered to developers with separate endpoints for audio, video, image, and text analysis, detailed documentation, and SDK support.',
+        'api.back': 'Back to Home',
+        
+        // Pricing page
+        'pricing.badge': 'Coming Soon',
+        'pricing.title': 'Pricing',
+        'pricing.desc1': 'Special plans for enterprise and individual users coming soon.',
+        'pricing.desc2': '<strong>API-Based:</strong> Usage-based pricing, enterprise volume discounts, and custom SLA options.<br><strong>App-Based:</strong> Freemium model for individual users, monthly/annual subscription packages for advanced features.',
+        'pricing.desc3': 'Follow us for detailed pricing information and early access opportunities.',
+        
+        // About page
+        'about.title': 'Our Team',
+        'about.university': 'Bilkent University',
+        'about.desc1': 'CyberShieldAI is a startup project developed by three senior engineering students from Bilkent University\'s Electrical and Electronics Engineering department, focused on productization and commercialization.',
+        'about.desc2': 'Our team conducts research and development in artificial intelligence, machine learning, signal processing, and computer networks.',
+        'about.desc3': 'We aim to transform our academic background into applicable and sustainable engineering solutions that directly address real-world problems.',
+        'about.desc4': 'From early stages, we have been actively involved in product development, rapid prototyping, and technical demo creation. CyberShieldAI is built on an approach that combines technical depth with application focus, aiming to develop reliable, transparent, and verifiable solutions against AI-generated misleading content.',
+        'about.teamMembers': 'Team Members',
+        'about.department': 'Department',
+        'about.graduation': 'Graduation',
+        
+        // Contact page
+        'contact.title': 'Contact',
+        'contact.desc': 'Reach out to the CyberShieldAI team to get in touch, explore collaboration opportunities, or ask questions.',
+        'contact.linkedin': 'LinkedIn'
+    }
+};
+
+// Current language (default: Turkish)
+let currentLang = localStorage.getItem('lang') || 'tr';
+
+// Apply translations
+function applyTranslations(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang === 'tr' ? 'tr' : 'en';
+    
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' && element.placeholder) {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Update page title based on current page
+    const pageTitles = {
+        'index.html': lang === 'tr' ? 'CyberShieldAI - Yapay Zeka İçerik Tespit Platformu' : 'CyberShieldAI - AI Content Detection Platform',
+        'analyze.html': lang === 'tr' ? 'Analiz - CyberShieldAI' : 'Analyze - CyberShieldAI',
+        'history.html': lang === 'tr' ? 'Geçmiş - CyberShieldAI' : 'History - CyberShieldAI',
+        'api.html': lang === 'tr' ? 'API - CyberShieldAI' : 'API - CyberShieldAI',
+        'pricing.html': lang === 'tr' ? 'Fiyatlandırma - CyberShieldAI' : 'Pricing - CyberShieldAI',
+        'about.html': lang === 'tr' ? 'Hakkımızda - CyberShieldAI' : 'About Us - CyberShieldAI',
+        'contact.html': lang === 'tr' ? 'İletişim - CyberShieldAI' : 'Contact - CyberShieldAI'
+    };
+    
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (pageTitles[currentPage]) {
+        document.title = pageTitles[currentPage];
+    }
+    
+    // Update language toggle button
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.innerHTML = `<span>${lang === 'tr' ? 'EN' : 'TR'}</span>`;
+    }
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    applyTranslations(currentLang);
+    
+    // Language toggle click handler
+    const langToggle = document.getElementById('langToggle');
+    langToggle?.addEventListener('click', () => {
+        const newLang = currentLang === 'tr' ? 'en' : 'tr';
+        applyTranslations(newLang);
+    });
+});
+
 // ===== Demo Banner =====
 document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById('demoBanner');

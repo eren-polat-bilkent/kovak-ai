@@ -99,7 +99,7 @@
     <!-- Demo Disclaimer Banner -->
     <div class="demo-banner" id="demoBanner">
         <i class="fas fa-flask"></i>
-        <span><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
+        <span data-i18n="banner.text"><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
         <button class="banner-close" id="bannerClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     </div>
 
@@ -113,11 +113,14 @@
                 <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="analyze.html">Analiz</a>
-                <a href="history.html">Geçmiş</a>
-                <a href="api.html" class="nav-btn active">API Anahtarı Al</a>
+                <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+                <a href="analyze.html" data-i18n="nav.analyze">Analiz</a>
+                <a href="history.html" data-i18n="nav.history">Geçmiş</a>
+                <a href="api.html" class="nav-btn active" data-i18n="nav.api">API Anahtarı Al</a>
             </div>
+            <button class="lang-toggle" id="langToggle">
+                <span>TR</span>
+            </button>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
@@ -130,17 +133,17 @@
             <div class="info-icon">
                 <i class="fas fa-code"></i>
             </div>
-            <span class="info-badge"><i class="fas fa-wrench"></i> Beta Yakında</span>
-            <h1>API Hizmeti</h1>
-            <p>
+            <span class="info-badge"><i class="fas fa-wrench"></i> <span data-i18n="api.badge">Beta Yakında</span></span>
+            <h1 data-i18n="api.title">API Hizmeti</h1>
+            <p data-i18n="api.desc1">
                 Beta sürümü yakın zamanda aktif olacaktır.
             </p>
-            <p>
+            <p data-i18n="api.desc2">
                 REST tabanlı API altyapımız; ses, video, görsel ve metin analizi için ayrı endpoint'ler, detaylı dokümantasyon ve SDK desteği ile geliştiricilere sunulacaktır.
             </p>
             <a href="index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i>
-                Ana Sayfaya Dön
+                <span data-i18n="api.back">Ana Sayfaya Dön</span>
             </a>
         </div>
     </section>

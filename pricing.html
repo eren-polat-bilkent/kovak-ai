@@ -99,7 +99,7 @@
     <!-- Demo Disclaimer Banner -->
     <div class="demo-banner" id="demoBanner">
         <i class="fas fa-flask"></i>
-        <span><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
+        <span data-i18n="banner.text"><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
         <button class="banner-close" id="bannerClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     </div>
 
@@ -113,11 +113,14 @@
                 <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="analyze.html">Analiz</a>
-                <a href="history.html">Geçmiş</a>
-                <a href="api.html" class="nav-btn">API Anahtarı Al</a>
+                <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+                <a href="analyze.html" data-i18n="nav.analyze">Analiz</a>
+                <a href="history.html" data-i18n="nav.history">Geçmiş</a>
+                <a href="api.html" class="nav-btn" data-i18n="nav.api">API Anahtarı Al</a>
             </div>
+            <button class="lang-toggle" id="langToggle">
+                <span>TR</span>
+            </button>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
@@ -130,21 +133,21 @@
             <div class="info-icon">
                 <i class="fas fa-tags"></i>
             </div>
-            <span class="info-badge"><i class="fas fa-clock"></i> Yakında</span>
-            <h1>Fiyatlandırma</h1>
-            <p>
+            <span class="info-badge"><i class="fas fa-clock"></i> <span data-i18n="pricing.badge">Yakında</span></span>
+            <h1 data-i18n="pricing.title">Fiyatlandırma</h1>
+            <p data-i18n="pricing.desc1">
                 Kurumsal ve bireysel kullanıcılara özel planlar yakında sunulacaktır.
             </p>
-            <p>
+            <p data-i18n="pricing.desc2">
                 <strong>API Tabanlı:</strong> Kullanım bazlı fiyatlandırma, kurumsal hacim indirimleri ve özel SLA seçenekleri.<br>
                 <strong>Uygulama Tabanlı:</strong> Bireysel kullanıcılar için freemium model, gelişmiş özellikler için aylık/yıllık abonelik paketleri.
             </p>
-            <p>
+            <p data-i18n="pricing.desc3">
                 Detaylı fiyat bilgisi ve erken erişim fırsatları için bizi takip edin.
             </p>
             <a href="index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i>
-                Ana Sayfaya Dön
+                <span data-i18n="api.back">Ana Sayfaya Dön</span>
             </a>
         </div>
     </section>
