@@ -110,23 +110,23 @@
                         <div class="tile-feed">
                             <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop&crop=faces" alt="Interviewer">
                             <div class="tile-feed-overlay">
-                                <span class="tile-name">HR Lead</span>
+                                <span class="tile-name" data-i18n="panel.role1">HR Lead</span>
                                 <span class="tile-mic on"><i class="fas fa-microphone"></i></span>
                             </div>
-                            <span class="tile-pill ok"><i class="fas fa-check-circle"></i> Baseline</span>
+                            <span class="tile-pill ok"><i class="fas fa-check-circle"></i> <span data-i18n="monitor.pill.baseline">Baseline</span></span>
                         </div>
                         <div class="tile-metrics">
                             <div class="tile-speed">
                                 <span class="speed-icon"><i class="fas fa-gauge-high"></i></span>
                                 <div class="speed-text">
-                                    <span class="speed-label">Speech rate</span>
-                                    <span class="speed-value">142 <small>WPM</small></span>
+                                    <span class="speed-label" data-i18n="monitor.speechRate">Speech rate</span>
+                                    <span class="speed-value">142 <small data-i18n="monitor.wpm">WPM</small></span>
                                 </div>
-                                <span class="speed-tag ok">Normal cadence · 1.0×</span>
+                                <span class="speed-tag ok" data-i18n="monitor.speed.ok">Normal cadence · 1.0×</span>
                             </div>
                             <div class="tile-sub-metrics">
-                                <span><i class="fas fa-stopwatch"></i> Response latency · 0.6s</span>
-                                <span><i class="fas fa-eye"></i> Gaze on-screen · 98%</span>
+                                <span><i class="fas fa-stopwatch"></i> <span data-i18n="monitor.latency.ok">Response latency · 0.6s</span></span>
+                                <span><i class="fas fa-eye"></i> <span data-i18n="monitor.gaze.ok">Gaze on-screen · 98%</span></span>
                             </div>
                         </div>
                     </div>
@@ -138,26 +138,26 @@
                             <div class="scan-line"></div>
                             <div class="gaze-marker">
                                 <span class="gaze-dot"></span>
-                                <span class="gaze-arrow"><i class="fas fa-arrow-up-right-from-square"></i> off-screen</span>
+                                <span class="gaze-arrow"><i class="fas fa-arrow-up-right-from-square"></i> <span data-i18n="monitor.offscreen">off-screen</span></span>
                             </div>
                             <div class="tile-feed-overlay">
-                                <span class="tile-name">Candidate</span>
+                                <span class="tile-name" data-i18n="panel.candidate">Candidate</span>
                                 <span class="tile-mic on"><i class="fas fa-microphone"></i></span>
                             </div>
-                            <span class="tile-pill bad"><i class="fas fa-triangle-exclamation"></i> 4 anomalies</span>
+                            <span class="tile-pill bad"><i class="fas fa-triangle-exclamation"></i> <span data-i18n="monitor.pill.anomalies">4 anomalies</span></span>
                         </div>
                         <div class="tile-metrics">
                             <div class="tile-speed">
                                 <span class="speed-icon danger"><i class="fas fa-gauge-simple"></i></span>
                                 <div class="speed-text">
-                                    <span class="speed-label">Speech rate</span>
-                                    <span class="speed-value">87 <small>WPM</small></span>
+                                    <span class="speed-label" data-i18n="monitor.speechRate">Speech rate</span>
+                                    <span class="speed-value">87 <small data-i18n="monitor.wpm">WPM</small></span>
                                 </div>
-                                <span class="speed-tag bad">Below baseline · 0.6× · long pauses</span>
+                                <span class="speed-tag bad" data-i18n="monitor.speed.bad">Below baseline · 0.6× · long pauses</span>
                             </div>
                             <div class="tile-sub-metrics">
-                                <span class="danger"><i class="fas fa-stopwatch"></i> Response latency · 4.8s</span>
-                                <span class="danger"><i class="fas fa-eye-slash"></i> Gaze off-screen · 1.2s drift</span>
+                                <span class="danger"><i class="fas fa-stopwatch"></i> <span data-i18n="monitor.latency.bad">Response latency · 4.8s</span></span>
+                                <span class="danger"><i class="fas fa-eye-slash"></i> <span data-i18n="monitor.gaze.bad">Gaze off-screen · 1.2s drift</span></span>
                             </div>
                         </div>
                     </div>
@@ -166,39 +166,39 @@
                 <!-- Detected abnormalities -->
                 <div class="monitor-abnormalities">
                     <div class="abn-header">
-                        <h3><i class="fas fa-triangle-exclamation"></i> Detected abnormalities</h3>
-                        <span class="abn-count">5 signals flagged</span>
+                        <h3><i class="fas fa-triangle-exclamation"></i> <span data-i18n="monitor.abn.title">Detected abnormalities</span></h3>
+                        <span class="abn-count" data-i18n="monitor.abn.count">5 signals flagged</span>
                     </div>
                     <ul class="abn-list">
                         <li class="high">
                             <span class="abn-time">00:42</span>
                             <span class="abn-icon"><i class="fas fa-eye"></i></span>
-                            <span class="abn-text"><strong>Eye-gaze drifted off-screen</strong> — 1.2s while answering Q3</span>
-                            <span class="abn-sev high">HIGH</span>
+                            <span class="abn-text" data-i18n="monitor.abn.gaze"><strong>Eye-gaze drifted off-screen</strong> — 1.2s while answering Q3</span>
+                            <span class="abn-sev high" data-i18n="monitor.sev.high">HIGH</span>
                         </li>
                         <li class="medium">
                             <span class="abn-time">01:18</span>
                             <span class="abn-icon"><i class="fas fa-stopwatch"></i></span>
-                            <span class="abn-text"><strong>Pre-answer pause</strong> — 4.8s · matches typical LLM round-trip</span>
-                            <span class="abn-sev medium">MED</span>
+                            <span class="abn-text" data-i18n="monitor.abn.latency"><strong>Pre-answer pause</strong> — 4.8s · matches typical LLM round-trip</span>
+                            <span class="abn-sev medium" data-i18n="monitor.sev.medium">MED</span>
                         </li>
                         <li class="high">
                             <span class="abn-time">01:21</span>
                             <span class="abn-icon"><i class="fas fa-keyboard"></i></span>
-                            <span class="abn-text"><strong>Off-screen typing burst</strong> — 3 events in 2.4s</span>
-                            <span class="abn-sev high">HIGH</span>
+                            <span class="abn-text" data-i18n="monitor.abn.typing"><strong>Off-screen typing burst</strong> — 3 events in 2.4s</span>
+                            <span class="abn-sev high" data-i18n="monitor.sev.high">HIGH</span>
                         </li>
                         <li class="high">
                             <span class="abn-time">01:26</span>
                             <span class="abn-icon"><i class="fas fa-comment-dots"></i></span>
-                            <span class="abn-text"><strong>LLM phrasing detected</strong> — “leverage my expertise”, “multifaceted endeavor”</span>
-                            <span class="abn-sev high">HIGH</span>
+                            <span class="abn-text" data-i18n="monitor.abn.phrasing"><strong>LLM phrasing detected</strong> — “leverage my expertise”, “multifaceted endeavor”</span>
+                            <span class="abn-sev high" data-i18n="monitor.sev.high">HIGH</span>
                         </li>
                         <li class="medium">
                             <span class="abn-time">01:34</span>
                             <span class="abn-icon"><i class="fas fa-microphone-lines"></i></span>
-                            <span class="abn-text"><strong>TTS prosody match</strong> — 82% similarity to synthetic voice fingerprint</span>
-                            <span class="abn-sev medium">MED</span>
+                            <span class="abn-text" data-i18n="monitor.abn.tts"><strong>TTS prosody match</strong> — 82% similarity to synthetic voice fingerprint</span>
+                            <span class="abn-sev medium" data-i18n="monitor.sev.medium">MED</span>
                         </li>
                     </ul>
                 </div>
@@ -207,7 +207,7 @@
                 <div class="monitor-risk">
                     <div class="risk-left">
                         <span class="risk-label" data-i18n="panel.risk.label">AI-Assist Risk</span>
-                        <span class="risk-sublabel">aggregated across all signals</span>
+                        <span class="risk-sublabel" data-i18n="monitor.risk.sub">aggregated across all signals</span>
                     </div>
                     <div class="risk-bar-wrap">
                         <div class="risk-bar"><div class="risk-bar-fill"></div></div>
@@ -217,6 +217,55 @@
                         <span class="risk-level" data-i18n="panel.risk.level">HIGH</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Suite — links to the two new HR-focused demos -->
+    <section class="hr-suite-promo" id="hr-suite">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="hrsuite.badge">HR Suite</span>
+                <h2 data-i18n="hrsuite.title">Built for <span class="gradient-text">HR &amp; Recruiting</span> teams</h2>
+                <p data-i18n="hrsuite.subtitle">Two lightweight tools your hiring panel can use today. Designed to feel approachable — no data-science team required.</p>
+            </div>
+
+            <div class="hr-suite-grid">
+                <a href="speech.html" class="hr-suite-card">
+                    <div class="hr-suite-card-icon"><i class="fas fa-microphone-lines"></i></div>
+                    <div class="hr-suite-card-body">
+                        <span class="hr-suite-card-eyebrow" data-i18n="hrsuite.speech.eyebrow">Speech &amp; voice authenticity</span>
+                        <h3 data-i18n="hrsuite.speech.title">Catch AI speech and voice clones in interview answers</h3>
+                        <p data-i18n="hrsuite.speech.desc">Live transcription, sentence-level AI scoring, and voice-signal analysis — surfaced on a clean HR-ready dashboard.</p>
+                        <ul class="hr-suite-card-list">
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.speech.item1">Sentence-level AI probability</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.speech.item2">TTS prosody &amp; voice-clone signals</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.speech.item3">Response latency &amp; hesitation</span></li>
+                        </ul>
+                    </div>
+                    <div class="hr-suite-card-cta">
+                        <span data-i18n="hrsuite.speech.cta">Open speech demo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="cv-check.html" class="hr-suite-card">
+                    <div class="hr-suite-card-icon alt"><i class="fas fa-file-lines"></i></div>
+                    <div class="hr-suite-card-body">
+                        <span class="hr-suite-card-eyebrow" data-i18n="hrsuite.cv.eyebrow">CV &amp; SOP AI detection <span class="hr-suite-beta">BETA</span></span>
+                        <h3 data-i18n="hrsuite.cv.title">Spot AI-written CVs, cover letters &amp; statements of purpose</h3>
+                        <p data-i18n="hrsuite.cv.desc">Drop a CV or SOP and get a per-section AI score, highlighted boilerplate phrasing, and concrete follow-up questions for your recruiters.</p>
+                        <ul class="hr-suite-card-list">
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.cv.item1">Per-section AI generation score</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.cv.item2">Inline boilerplate flagging</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="hrsuite.cv.item3">Tailored HR follow-up prompts</span></li>
+                        </ul>
+                    </div>
+                    <div class="hr-suite-card-cta">
+                        <span data-i18n="hrsuite.cv.cta">Open CV / SOP demo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -348,55 +397,6 @@
                     </div>
                     <span class="secondary-acc">89%</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HR Suite — links to the two new HR-focused demos -->
-    <section class="hr-suite-promo" id="hr-suite">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">HR Suite</span>
-                <h2>Built for <span class="gradient-text">HR &amp; Recruiting</span> teams</h2>
-                <p>Two lightweight tools your hiring panel can use today. Designed to feel approachable — no data-science team required.</p>
-            </div>
-
-            <div class="hr-suite-grid">
-                <a href="speech.html" class="hr-suite-card">
-                    <div class="hr-suite-card-icon"><i class="fas fa-microphone-lines"></i></div>
-                    <div class="hr-suite-card-body">
-                        <span class="hr-suite-card-eyebrow">Speech &amp; voice authenticity</span>
-                        <h3>Catch AI speech and voice clones in interview answers</h3>
-                        <p>Live transcription, sentence-level AI scoring, and voice-signal analysis — surfaced on a clean HR-ready dashboard.</p>
-                        <ul class="hr-suite-card-list">
-                            <li><i class="fas fa-check"></i> Sentence-level AI probability</li>
-                            <li><i class="fas fa-check"></i> TTS prosody &amp; voice-clone signals</li>
-                            <li><i class="fas fa-check"></i> Response latency &amp; hesitation</li>
-                        </ul>
-                    </div>
-                    <div class="hr-suite-card-cta">
-                        <span>Open speech demo</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-
-                <a href="cv-check.html" class="hr-suite-card">
-                    <div class="hr-suite-card-icon alt"><i class="fas fa-file-lines"></i></div>
-                    <div class="hr-suite-card-body">
-                        <span class="hr-suite-card-eyebrow">CV &amp; SOP AI detection <span class="hr-suite-beta">BETA</span></span>
-                        <h3>Spot AI-written CVs, cover letters &amp; statements of purpose</h3>
-                        <p>Drop a CV or SOP and get a per-section AI score, highlighted boilerplate phrasing, and concrete follow-up questions for your recruiters.</p>
-                        <ul class="hr-suite-card-list">
-                            <li><i class="fas fa-check"></i> Per-section AI generation score</li>
-                            <li><i class="fas fa-check"></i> Inline boilerplate flagging</li>
-                            <li><i class="fas fa-check"></i> Tailored HR follow-up prompts</li>
-                        </ul>
-                    </div>
-                    <div class="hr-suite-card-cta">
-                        <span>Open CV / SOP demo</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
             </div>
         </div>
     </section>
