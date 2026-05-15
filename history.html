@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geçmiş - CyberShieldAI</title>
+    <title>History - CyberShieldAI</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/history.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,8 +13,8 @@
     <!-- Demo Disclaimer Banner -->
     <div class="demo-banner" id="demoBanner">
         <i class="fas fa-flask"></i>
-        <span><strong>Demo:</strong> Modeller hata yapabilir. Sonuçları bağımsız olarak teyit ediniz.</span>
-        <button class="banner-close" id="bannerClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
+        <span data-i18n="banner.text"><strong>Demo:</strong> Models may make mistakes. Please verify results independently.</span>
+        <button class="banner-close" id="bannerClose" aria-label="Close"><i class="fas fa-times"></i></button>
     </div>
 
     <!-- Navigation -->
@@ -27,11 +27,14 @@
                 <span>CyberShieldAI</span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="analyze.html">Analiz</a>
-                <a href="history.html" class="active">Geçmiş</a>
-                <a href="api.html" class="nav-btn">API Anahtarı Al</a>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="analyze.html" data-i18n="nav.analyze">Analyze</a>
+                <a href="history.html" class="active" data-i18n="nav.history">History</a>
+                <a href="api.html" class="nav-btn" data-i18n="nav.api">Get API Key</a>
             </div>
+            <button class="lang-toggle" id="langToggle" title="Switch Language">
+                <span>TR</span>
+            </button>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
@@ -43,17 +46,17 @@
             <!-- Page Header -->
             <div class="page-header">
                 <div class="header-content">
-                    <h1>Analiz Geçmişi</h1>
-                    <p>Geçmiş analizlerinizi görüntüleyin ve yönetin</p>
+                    <h1 data-i18n="history.title">Analysis History</h1>
+                    <p data-i18n="history.subtitle">View and manage your past analyses</p>
                 </div>
                 <div class="header-actions">
                     <button class="btn btn-secondary" onclick="clearHistory()">
                         <i class="fas fa-trash"></i>
-                        Tümünü Temizle
+                        <span data-i18n="history.clearAll">Clear All</span>
                     </button>
                     <a href="analyze.html" class="btn btn-primary">
                         <i class="fas fa-plus"></i>
-                        Yeni Analiz
+                        <span data-i18n="history.newAnalysis">New Analysis</span>
                     </a>
                 </div>
             </div>
@@ -62,28 +65,28 @@
             <div class="filters-bar">
                 <div class="filters-left">
                     <div class="filter-group">
-                        <label>Tür</label>
+                        <label data-i18n="history.type">Type</label>
                         <select id="filterType">
-                            <option value="all">Tüm Türler</option>
-                            <option value="audio">Ses</option>
-                            <option value="video">Video</option>
-                            <option value="image">Görsel</option>
+                            <option value="all" data-i18n="history.allTypes">All Types</option>
+                            <option value="audio" data-i18n="analyze.audio">Audio</option>
+                            <option value="video" data-i18n="analyze.video">Video</option>
+                            <option value="image" data-i18n="analyze.image">Image</option>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label>Risk Seviyesi</label>
+                        <label data-i18n="history.riskLevel">Risk Level</label>
                         <select id="filterRisk">
-                            <option value="all">Tüm Seviyeler</option>
-                            <option value="low">Düşük (0-30)</option>
-                            <option value="medium">Orta (31-60)</option>
-                            <option value="high">Yüksek (61-100)</option>
+                            <option value="all" data-i18n="history.allLevels">All Levels</option>
+                            <option value="low" data-i18n="history.low">Low (0-30)</option>
+                            <option value="medium" data-i18n="history.medium">Medium (31-60)</option>
+                            <option value="high" data-i18n="history.high">High (61-100)</option>
                         </select>
                     </div>
                 </div>
                 <div class="filters-right">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="Dosya ara...">
+                        <input type="text" id="searchInput" data-i18n="history.search" placeholder="Search files...">
                     </div>
                 </div>
             </div>
@@ -96,7 +99,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="totalScans">0</span>
-                        <span class="stat-label">Toplam Tarama</span>
+                        <span class="stat-label" data-i18n="history.totalScans">Total Scans</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -105,7 +108,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="highRiskCount">0</span>
-                        <span class="stat-label">Yüksek Risk</span>
+                        <span class="stat-label" data-i18n="history.highRisk">High Risk</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -114,7 +117,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="safeCount">0</span>
-                        <span class="stat-label">Muhtemelen Güvenli</span>
+                        <span class="stat-label" data-i18n="history.safe">Likely Safe</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -123,7 +126,7 @@
                     </div>
                     <div class="stat-info">
                         <span class="stat-number" id="avgScore">0</span>
-                        <span class="stat-label">Ort. Risk Skoru</span>
+                        <span class="stat-label" data-i18n="history.avgScore">Avg. Risk Score</span>
                     </div>
                 </div>
             </div>
@@ -138,11 +141,11 @@
                     <div class="empty-icon">
                         <i class="fas fa-inbox"></i>
                     </div>
-                    <h3>Analiz Geçmişi Yok</h3>
-                    <p>Geçmişinizi görmek için dosya analiz etmeye başlayın</p>
+                    <h3 data-i18n="history.noHistory">No Analysis History</h3>
+                    <p data-i18n="history.noHistoryDesc">Start analyzing files to see your history</p>
                     <a href="analyze.html" class="btn btn-primary">
                         <i class="fas fa-upload"></i>
-                        İlk Dosyayı Analiz Et
+                        <span data-i18n="history.firstFile">Analyze First File</span>
                     </a>
                 </div>
             </div>
@@ -153,7 +156,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-                <p>&copy; 2026 CyberShieldAI. Tüm hakları saklıdır.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 CyberShieldAI. All rights reserved.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>
@@ -168,11 +171,11 @@
         // Update stats
         function updateStats() {
             const history = JSON.parse(localStorage.getItem('cybershieldHistory') || '[]');
-            
+
             document.getElementById('totalScans').textContent = history.length;
             document.getElementById('highRiskCount').textContent = history.filter(h => h.riskScore > 60).length;
             document.getElementById('safeCount').textContent = history.filter(h => h.riskScore <= 30).length;
-            
+
             if (history.length > 0) {
                 const avg = Math.round(history.reduce((sum, h) => sum + h.riskScore, 0) / history.length);
                 document.getElementById('avgScore').textContent = avg;
@@ -188,24 +191,24 @@
             const typeFilter = document.getElementById('filterType').value;
             const riskFilter = document.getElementById('filterRisk').value;
             const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-            
+
             const items = document.querySelectorAll('.history-item');
-            
+
             items.forEach(item => {
                 const type = item.querySelector('.history-icon').classList[1];
                 const score = parseInt(item.querySelector('.score-value').textContent);
                 const name = item.querySelector('.history-name').textContent.toLowerCase();
-                
+
                 let show = true;
-                
+
                 if (typeFilter !== 'all' && type !== typeFilter) show = false;
-                
+
                 if (riskFilter === 'low' && score > 30) show = false;
                 if (riskFilter === 'medium' && (score <= 30 || score > 60)) show = false;
                 if (riskFilter === 'high' && score <= 60) show = false;
-                
+
                 if (searchQuery && !name.includes(searchQuery)) show = false;
-                
+
                 item.style.display = show ? 'flex' : 'none';
             });
         }

@@ -202,6 +202,7 @@ const translations = {
         'analyze.urlDesc': 'Ses, video veya görsel dosyasına doğrudan bağlantı girin',
         'analyze.sources': 'Desteklenen kaynaklar:',
         'analyze.directLink': 'Doğrudan Link',
+        'analyze.analyzing': 'ANALİZ EDİLİYOR...',
         
         // History page
         'history.title': 'Analiz Geçmişi',
@@ -456,6 +457,7 @@ const translations = {
         'analyze.urlDesc': 'Enter a direct link to audio, video, or image file',
         'analyze.sources': 'Supported sources:',
         'analyze.directLink': 'Direct Link',
+        'analyze.analyzing': 'ANALYZING...',
         
         // History page
         'history.title': 'Analysis History',
@@ -703,7 +705,7 @@ function handleFile(file) {
     }
 
     if (!fileType) {
-        alert('Desteklenmeyen dosya türü. Lütfen ses, video veya görsel dosyası yükleyin.');
+        alert('Unsupported file type. Please upload an audio, video, or image file.');
         return;
     }
 
@@ -934,12 +936,12 @@ function simulateAnalysis(file, fileType) {
     resultSection.style.display = 'none';
 
     const stages = [
-        { percent: 15, status: 'Dosya yükleniyor...' },
-        { percent: 30, status: 'Özellikler çıkarılıyor...' },
-        { percent: 50, status: 'Yapay zeka modelleri çalıştırılıyor...' },
-        { percent: 70, status: 'Örüntüler analiz ediliyor...' },
-        { percent: 85, status: 'Rapor oluşturuluyor...' },
-        { percent: 100, status: 'Tamamlandı!' }
+        { percent: 15, status: 'Uploading file...' },
+        { percent: 30, status: 'Extracting features...' },
+        { percent: 50, status: 'Running AI models...' },
+        { percent: 70, status: 'Analyzing patterns...' },
+        { percent: 85, status: 'Generating report...' },
+        { percent: 100, status: 'Complete!' }
     ];
 
     let currentStage = 0;
@@ -981,16 +983,16 @@ function showResults(file, fileType) {
     let color, label;
     if (riskScore <= 30) {
         color = '#22c55e';
-        label = 'MUHTEMELEN ORIJINAL';
+        label = 'LIKELY AUTHENTIC';
     } else if (riskScore <= 60) {
         color = '#eab308';
-        label = 'ŞÜPHELİ';
+        label = 'SUSPICIOUS';
     } else if (riskScore <= 85) {
         color = '#f97316';
-        label = 'MUHTEMELEN MANİPÜLE';
+        label = 'LIKELY MANIPULATED';
     } else {
         color = '#ef4444';
-        label = 'YÜKSEK RİSK - MUHTEMELEN SAHTE';
+        label = 'HIGH RISK - LIKELY FAKE';
     }
 
     riskGauge.style.background = `conic-gradient(${color} 0deg, ${color} ${riskScore * 3.6}deg, rgba(255,255,255,0.1) ${riskScore * 3.6}deg)`;
@@ -1043,25 +1045,25 @@ function animateRiskScore(element, target) {
 function generateSignals(fileType, riskScore) {
     const signalsByType = {
         audio: [
-            { title: 'Spektral Anomali', description: 'Ses bandında olağandışı frekans örüntüleri tespit edildi (2.3-4.1kHz)', severity: 'high' },
-            { title: 'Ses Tutarlılığı', description: 'Perde ve ton varyansları doğal konuşma kalıplarıyla uyumsuz', severity: 'medium' },
-            { title: 'Arka Plan Artifaktları', description: 'Ses arka planında sentetik gürültü örüntüsü tespit edildi', severity: 'low' },
-            { title: 'Zamansal Boşluklar', description: 'Fonemler arasındaki mikro boşluklar birleştirme olduğunu gösteriyor', severity: 'high' },
-            { title: 'Formant Analizi', description: 'Formant frekansları sentetik üretim işaretleri gösteriyor', severity: 'medium' }
+            { title: 'Spectral Anomaly', description: 'Unusual frequency patterns detected in the audio band (2.3-4.1 kHz)', severity: 'high' },
+            { title: 'Voice Consistency', description: 'Pitch and tone variance inconsistent with natural speech patterns', severity: 'medium' },
+            { title: 'Background Artifacts', description: 'Synthetic noise pattern detected in the audio background', severity: 'low' },
+            { title: 'Temporal Gaps', description: 'Micro-gaps between phonemes suggest splicing', severity: 'high' },
+            { title: 'Formant Analysis', description: 'Formant frequencies show markers of synthetic generation', severity: 'medium' }
         ],
         video: [
-            { title: 'Yüz Manipülasyonu', description: 'Ana öznede yüz değiştirme veya değişim tespit edildi', severity: 'high' },
-            { title: 'Zamansal Tutarsızlık', description: '245-260 kareler arasında doğal olmayan hareket bulanıklığı', severity: 'medium' },
-            { title: 'Göz Kırpma Oranı', description: 'Kırpma örüntüleri doğal insan davranışından sapma gösteriyor', severity: 'high' },
-            { title: 'Sınır Artifaktları', description: 'Yüz bölgesinde kenar tutarsızlıkları', severity: 'medium' },
-            { title: 'Sıkıştırma Kalıntıları', description: 'Manipüle edilmiş alanlarda yerel yeniden kodlama tespit edildi', severity: 'low' }
+            { title: 'Face Manipulation', description: 'Face swap or alteration detected on the primary subject', severity: 'high' },
+            { title: 'Temporal Inconsistency', description: 'Unnatural motion blur across frames 245-260', severity: 'medium' },
+            { title: 'Blink Rate', description: 'Blink patterns deviate from natural human behavior', severity: 'high' },
+            { title: 'Boundary Artifacts', description: 'Edge inconsistencies around the face region', severity: 'medium' },
+            { title: 'Compression Residue', description: 'Localized re-encoding detected in manipulated areas', severity: 'low' }
         ],
         image: [
-            { title: 'Diffusion İmzası', description: 'Frekans alanında Stable Diffusion model imzası tespit edildi', severity: 'high' },
-            { title: 'Doku Anomalisi', description: 'Cilt dokusunda doğal mikro detay örüntüleri eksik', severity: 'high' },
-            { title: 'Simetri Artifaktları', description: 'Yüz özelliklerinde doğal olmayan iki taraflı simetri', severity: 'medium' },
-            { title: 'Aydınlatma Tutarsızlığı', description: 'Işık kaynağı yönleri görsel genelinde tutarsız', severity: 'medium' },
-            { title: 'JPEG Hayalet Analizi', description: 'Çoklu sıkıştırma katmanları tespit edildi', severity: 'low' }
+            { title: 'Diffusion Signature', description: 'Stable Diffusion model signature detected in the frequency domain', severity: 'high' },
+            { title: 'Texture Anomaly', description: 'Skin texture lacks natural micro-detail patterns', severity: 'high' },
+            { title: 'Symmetry Artifacts', description: 'Unnatural bilateral symmetry in facial features', severity: 'medium' },
+            { title: 'Lighting Inconsistency', description: 'Light source directions inconsistent across the image', severity: 'medium' },
+            { title: 'JPEG Ghost Analysis', description: 'Multiple compression layers detected', severity: 'low' }
         ]
     };
 
@@ -1156,7 +1158,7 @@ function getScoreClass(score) {
 }
 
 function clearHistory() {
-    if (confirm('Tüm geçmişi silmek istediğinizden emin misiniz?')) {
+    if (confirm('Are you sure you want to clear all history?')) {
         localStorage.removeItem('cybershieldHistory');
         loadHistory();
     }
@@ -1168,7 +1170,7 @@ function analyzeText() {
     const textResult = document.getElementById('textResult');
     
     if (!textInput || !textInput.value.trim()) {
-        alert('Lütfen analiz edilecek bir metin girin');
+        alert('Please enter text to analyze');
         return;
     }
 
@@ -1219,10 +1221,10 @@ function formatDate(isoString) {
     const now = new Date();
     const diff = now - date;
     
-    if (diff < 60000) return 'Az önce';
-    if (diff < 3600000) return `${Math.floor(diff / 60000)}dk önce`;
-    if (diff < 86400000) return `${Math.floor(diff / 3600000)}sa önce`;
-    if (diff < 604800000) return `${Math.floor(diff / 86400000)}g önce`;
+    if (diff < 60000) return 'Just now';
+    if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`;
+    if (diff < 86400000) return `${Math.floor(diff / 3600000)}h ago`;
+    if (diff < 604800000) return `${Math.floor(diff / 86400000)}d ago`;
     
     return date.toLocaleDateString();
 }
@@ -1236,11 +1238,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (history.length === 0 && window.location.pathname.includes('history')) {
         // Add demo data
         const demoData = [
-            { fileName: 'roportaj_klibi.mp4', fileType: 'video', fileSize: 15728640, riskScore: 73, label: 'MUHTEMELEN MANİPÜLE', signals: 4 },
-            { fileName: 'ses_mesaji.mp3', fileType: 'audio', fileSize: 2458624, riskScore: 87, label: 'YÜKSEK RİSK - MUHTEMELEN SAHTE', signals: 5 },
-            { fileName: 'profil_foto.jpg', fileType: 'image', fileSize: 524288, riskScore: 12, label: 'MUHTEMELEN ORIJINAL', signals: 2 },
-            { fileName: 'podcast_kesiti.wav', fileType: 'audio', fileSize: 8945621, riskScore: 45, label: 'ŞÜPHELİ', signals: 3 },
-            { fileName: 'haber_gorseli.png', fileType: 'image', fileSize: 1245678, riskScore: 91, label: 'YÜKSEK RİSK - MUHTEMELEN SAHTE', signals: 5 }
+            { fileName: 'interview_clip.mp4', fileType: 'video', fileSize: 15728640, riskScore: 73, label: 'LIKELY MANIPULATED', signals: 4 },
+            { fileName: 'voice_message.mp3', fileType: 'audio', fileSize: 2458624, riskScore: 87, label: 'HIGH RISK - LIKELY FAKE', signals: 5 },
+            { fileName: 'profile_photo.jpg', fileType: 'image', fileSize: 524288, riskScore: 12, label: 'LIKELY AUTHENTIC', signals: 2 },
+            { fileName: 'podcast_excerpt.wav', fileType: 'audio', fileSize: 8945621, riskScore: 45, label: 'SUSPICIOUS', signals: 3 },
+            { fileName: 'news_image.png', fileType: 'image', fileSize: 1245678, riskScore: 91, label: 'HIGH RISK - LIKELY FAKE', signals: 5 }
         ];
         
         demoData.forEach((item, i) => {
