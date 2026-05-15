@@ -7,24 +7,67 @@ const translations = {
         'nav.history': 'Geçmiş',
         'nav.api': 'API Anahtarı Al',
         
-        // Hero
-        'hero.title1': 'Yapay Zeka Üretimi',
-        'hero.title2': 'İçerikleri Tespit Edin',
-        'hero.subtitle': 'Deepfake videoları, ses klonlamayı, yapay zeka ile üretilmiş görselleri ve sentetik metinleri yüksek doğruluk oranıyla tespit edin. Dijital manipülasyonlara karşı korunun.',
-        'hero.cta': 'Analiz Başlat',
+        // Hero (interview-focused)
+        'hero.badge': 'İK ve İşe Alım Ekipleri İçin',
+        'hero.title1': 'Mülakatlarda Yapay Zekâ',
+        'hero.title2': 'Destekli Kopyayı Yakalayın',
+        'hero.subtitle': 'Çok sinyalli yapay zekâ motorumuz; bakış yönü, yanıt gecikmesi, ses sentezi ve cevap stilometrisini gerçek zamanlı izler. Adayın ChatGPT, ses klonu ya da arka planda bir koç kullandığını mülakat paneliniz anında görür.',
+        'hero.cta': 'Canlı Demoyu Gör',
+        'hero.cta2': 'Pilot Talep Et',
         'hero.accuracy': '% Doğruluk',
-        'hero.speed': 'sn Ort. Hız',
-        'hero.scanned': 'K+ Dosya Tarandı',
-        
-        // Demo
+        'hero.speed': 'sn Ort. Uyarı Süresi',
+        'hero.scanned': 'K+ Mülakat Analiz Edildi',
+
+        // Interview Panel (hero visual)
+        'panel.title': 'Canlı Mülakat Monitörü',
+        'panel.status': 'CANLI',
+        'panel.role1': 'İK Sorumlusu',
+        'panel.role2': 'Teknik Lider',
+        'panel.candidate': 'Aday',
+        'panel.signalsTitle': 'Canlı Sinyaller',
+        'panel.signal.gaze': 'Bakış ekran dışına kaydı — 1.2sn',
+        'panel.signal.latency': 'Cevap öncesi duraklama — 4.8sn',
+        'panel.signal.typing': 'Ekran dışı yazım patlaması',
+        'panel.risk.label': 'YZ-Destek Riski',
+        'panel.risk.level': 'YÜKSEK',
+
+        // Demo (legacy)
         'demo.riskScore': 'Risk Skoru',
         'demo.signal1': 'Yüz manipülasyonu tespit edildi',
         'demo.signal2': 'Doğal olmayan göz hareketi',
-        
-        // Features
-        'features.badge': 'Özellikler',
-        'features.title': 'Her Tür <span class="gradient-text">Yapay Zeka Manipülasyonunu</span> Tespit Edin',
-        'features.subtitle': 'Çoklu ortam tespit motorumuz ses, video, görsel ve metinleri en güncel modellerle analiz eder.',
+
+        // Features — primary (interview signals)
+        'features.badge': 'Mülakat Bütünlük Sinyalleri',
+        'features.title': '<span class="gradient-text">YZ destekli adayları</span> yakalayan dört sinyal',
+        'features.subtitle': 'Motorumuz davranışsal, ses ve içerik sinyallerini birleştirerek şüpheli anları yanlış pozitif gürültü olmadan işaretler.',
+        'features.gaze.title': 'Bakış Takibi',
+        'features.gaze.desc': 'Adayın ikinci ekrandan, telefondan veya kamera dışı notlardan okuduğu anları tespit eder.',
+        'features.gaze.item1': 'Ekran dışı bakış süresi',
+        'features.gaze.item2': 'Çoklu monitör okuma örüntüleri',
+        'features.gaze.item3': 'Soru bazlı bakış ısı haritası',
+        'features.latency.badge': 'En Belirleyici',
+        'features.latency.title': 'Yanıt Gecikmesi Analizi',
+        'features.latency.desc': 'LLM yanıt sürelerine uyan şüpheli duraklamaları ve başka pencerede gerçekleşen yazım patlamalarını işaretler.',
+        'features.latency.item1': 'Cevap öncesi duraklama profili',
+        'features.latency.item2': 'Tuş vuruşu patlama tespiti',
+        'features.latency.item3': 'Pencere/sekme odak sinyalleri',
+        'features.voice.title': 'YZ Ses ve TTS Tespiti',
+        'features.voice.desc': 'Adayın mikrofonundan geçen metinden-konuşmaya, ses klonu ve tekrar oynatılan YZ üretimi cevapları yakalar.',
+        'features.voice.item1': 'TTS prozodi imzaları',
+        'features.voice.item2': 'Ses klonu tespiti',
+        'features.voice.item3': 'Dudak senkron uyumsuzluğu',
+        'features.stylometry.title': 'Cevap Stilometrisi',
+        'features.stylometry.desc': 'Canlı transkript skorlaması; konuşulan ya da yazılan cevaplardaki ChatGPT/Claude ifade örüntülerini tespit eder.',
+        'features.stylometry.item1': 'LLM ifade tespiti',
+        'features.stylometry.item2': 'Burstiness ve perplexity',
+        'features.stylometry.item3': 'Cümle bazlı YZ skoru',
+
+        // Secondary — also detects (existing deepfake coverage)
+        'secondary.badge': 'Ayrıca destekler',
+        'secondary.title': 'Tam <span class="gradient-text">deepfake ve YZ içerik</span> kapsaması',
+        'secondary.subtitle': 'Her mülakat kaydı genel amaçlı dedektörlerimizden de geçer — asenkron ev ödevi videoları, sesli notlar ve aday iş örnekleri için kullanışlıdır.',
+
+        // Features — secondary (legacy keys kept)
         'features.audio.title': 'Ses Deepfake',
         'features.audio.desc': 'Ses klonlama, sentetik konuşma ve ses manipülasyonlarını spektral analiz ile tespit edin.',
         'features.audio.item1': 'Ses klonlama tespiti',
@@ -49,20 +92,20 @@ const translations = {
         'features.accuracy': 'Doğruluk',
         
         // How it works
-        'how.badge': 'Süreç',
-        'how.title': 'Nasıl <span class="gradient-text">Çalışır</span>',
-        'how.subtitle': 'İçerik doğruluğunu doğrulamak için üç basit adım',
-        'how.step1.title': 'Yükle',
-        'how.step1.desc': 'Dosyanızı sürükleyip bırakın veya seçin. Ses, video, görsel ve metin desteği.',
-        'how.step2.title': 'Analiz Et',
-        'how.step2.desc': 'Yapay zeka modellerimiz içeriğinizi gelişmiş tespit algoritmalarıyla işler.',
-        'how.step3.title': 'Sonuçlar',
-        'how.step3.desc': 'Detaylı risk skorları, anahtar sinyaller ve dışa aktarma seçenekleri.',
-        
+        'how.badge': 'Nasıl çalışır',
+        'how.title': '<span class="gradient-text">Canlı görüşmeden bütünlük raporuna</span> üç adımda',
+        'how.subtitle': 'Panelinizin zaten kullandığı araçlara entegre olur — adayın bir şey yüklemesine gerek yok.',
+        'how.step1.title': 'Mülakatı Bağlayın',
+        'how.step1.desc': 'Zoom, Teams veya Google Meet\'e tek tıkla bağlanın — ya da asenkron inceleme için kayıt yükleyin.',
+        'how.step2.title': 'Gerçek Zamanlı İzleme',
+        'how.step2.desc': 'Çok sinyalli YZ; her cevabı bakış, gecikme, ses ve içerik doğruluğu açısından skorlar.',
+        'how.step3.title': 'Bütünlük Raporu',
+        'how.step3.desc': 'Soru bazlı risk zaman çizelgesi, işaretlenmiş anlar ve İK paneliniz için kaynak klip kanıtları.',
+
         // CTA
-        'cta.title': 'Yapay Zeka İçeriklerini Tespit Etmeye Hazır mısınız?',
-        'cta.subtitle': 'Ücretsiz analiz yapmaya başlayın. Kredi kartı gerekmez.',
-        'cta.button': 'Hemen Dene',
+        'cta.title': 'Bir sonraki mülakatınızda canlı görün',
+        'cta.subtitle': 'Örnek mülakatla canlı demo. Kurulum yok, kredi kartı gerekmez.',
+        'cta.button': 'Demoyu Başlat',
         
         // Footer
         'footer.tagline': 'Modern dünya için kurumsal düzeyde yapay zeka içerik tespiti.',
@@ -176,24 +219,67 @@ const translations = {
         'nav.history': 'History',
         'nav.api': 'Get API Key',
         
-        // Hero
-        'hero.title1': 'AI-Generated',
-        'hero.title2': 'Content Detection',
-        'hero.subtitle': 'Detect deepfake videos, voice cloning, AI-generated images, and synthetic text with high accuracy. Protect yourself against digital manipulation.',
-        'hero.cta': 'Start Analysis',
-        'hero.accuracy': '% Accuracy',
-        'hero.speed': 's Avg. Speed',
-        'hero.scanned': 'K+ Files Scanned',
-        
-        // Demo
+        // Hero (interview-focused)
+        'hero.badge': 'For HR & Recruiting Teams',
+        'hero.title1': 'Catch AI-Assisted Cheating',
+        'hero.title2': 'in Live Interviews',
+        'hero.subtitle': 'A multi-signal AI watches gaze, response latency, voice synthesis, and answer stylometry in real time — so your hiring panel knows the moment a candidate is leaning on ChatGPT, a voice clone, or an off-camera coach.',
+        'hero.cta': 'See live demo',
+        'hero.cta2': 'Book a pilot',
+        'hero.accuracy': '% Detection accuracy',
+        'hero.speed': 's Avg. flag time',
+        'hero.scanned': 'K+ Interviews analyzed',
+
+        // Interview Panel (hero visual)
+        'panel.title': 'Live Interview Monitor',
+        'panel.status': 'LIVE',
+        'panel.role1': 'HR Lead',
+        'panel.role2': 'Tech Lead',
+        'panel.candidate': 'Candidate',
+        'panel.signalsTitle': 'Live signals',
+        'panel.signal.gaze': 'Eye-gaze drifted off-screen — 1.2s',
+        'panel.signal.latency': 'Pre-answer pause — 4.8s',
+        'panel.signal.typing': 'Off-screen typing burst detected',
+        'panel.risk.label': 'AI-Assist Risk',
+        'panel.risk.level': 'HIGH',
+
+        // Demo (legacy)
         'demo.riskScore': 'Risk Score',
         'demo.signal1': 'Face manipulation detected',
         'demo.signal2': 'Unnatural eye movement',
-        
-        // Features
-        'features.badge': 'Features',
-        'features.title': 'Detect All Types of <span class="gradient-text">AI Manipulation</span>',
-        'features.subtitle': 'Our multi-media detection engine analyzes audio, video, images, and text with cutting-edge models.',
+
+        // Features — primary (interview signals)
+        'features.badge': 'Interview integrity signals',
+        'features.title': 'Four signals that catch <span class="gradient-text">AI-assisted candidates</span>',
+        'features.subtitle': 'Our engine fuses behavioral, audio, and content signals to flag suspicious interview moments without false-positive noise.',
+        'features.gaze.title': 'Eye-Gaze Tracking',
+        'features.gaze.desc': 'Detects when a candidate is reading from a second monitor, phone, or off-camera notes.',
+        'features.gaze.item1': 'Off-screen gaze duration',
+        'features.gaze.item2': 'Multi-monitor reading patterns',
+        'features.gaze.item3': 'Per-question gaze heatmap',
+        'features.latency.badge': 'Most Predictive',
+        'features.latency.title': 'Response Latency Analysis',
+        'features.latency.desc': 'Flags suspicious pre-answer pauses that match LLM round-trip times, plus keystroke bursts in another window.',
+        'features.latency.item1': 'Pre-answer pause profiling',
+        'features.latency.item2': 'Keystroke burst detection',
+        'features.latency.item3': 'Window / tab focus signals',
+        'features.voice.title': 'AI Voice & TTS Detection',
+        'features.voice.desc': 'Catches text-to-speech, voice cloning, and replayed AI-generated answers being fed through the candidate\'s mic.',
+        'features.voice.item1': 'TTS prosody fingerprints',
+        'features.voice.item2': 'Voice-clone detection',
+        'features.voice.item3': 'Lip-sync mismatch alerts',
+        'features.stylometry.title': 'Answer Stylometry',
+        'features.stylometry.desc': 'Live transcript scoring detects ChatGPT / Claude phrasing patterns in spoken or typed responses.',
+        'features.stylometry.item1': 'LLM phrasing detection',
+        'features.stylometry.item2': 'Burstiness & perplexity',
+        'features.stylometry.item3': 'Per-sentence AI score',
+
+        // Secondary — also detects
+        'secondary.badge': 'Also handles',
+        'secondary.title': 'Full <span class="gradient-text">deepfake & AI-content</span> coverage',
+        'secondary.subtitle': 'Every interview recording also flows through our general-purpose detectors — useful for reviewing async take-home videos, voice notes, and candidate work samples.',
+
+        // Features — secondary (legacy keys kept)
         'features.audio.title': 'Audio Deepfake',
         'features.audio.desc': 'Detect voice cloning, synthetic speech, and audio manipulation with spectral analysis.',
         'features.audio.item1': 'Voice cloning detection',
@@ -218,20 +304,20 @@ const translations = {
         'features.accuracy': 'Accuracy',
         
         // How it works
-        'how.badge': 'Process',
-        'how.title': 'How It <span class="gradient-text">Works</span>',
-        'how.subtitle': 'Three simple steps to verify content authenticity',
-        'how.step1.title': 'Upload',
-        'how.step1.desc': 'Drag and drop or select your file. Audio, video, image, and text support.',
-        'how.step2.title': 'Analyze',
-        'how.step2.desc': 'Our AI models process your content with advanced detection algorithms.',
-        'how.step3.title': 'Results',
-        'how.step3.desc': 'Detailed risk scores, key signals, and export options.',
-        
+        'how.badge': 'How it works',
+        'how.title': 'From <span class="gradient-text">live call to integrity report</span> in three steps',
+        'how.subtitle': 'Plug into the tools your panel already uses — no candidate install required.',
+        'how.step1.title': 'Connect the interview',
+        'how.step1.desc': 'One click into Zoom, Teams, or Google Meet — or upload a recording for async review.',
+        'how.step2.title': 'Real-time monitoring',
+        'how.step2.desc': 'Multi-signal AI scores every answer for gaze, latency, voice, and content authenticity.',
+        'how.step3.title': 'Integrity report',
+        'how.step3.desc': 'Per-question risk timeline with flagged moments and source-clip evidence for your HR panel.',
+
         // CTA
-        'cta.title': 'Ready to Detect AI Content?',
-        'cta.subtitle': 'Start analyzing for free. No credit card required.',
-        'cta.button': 'Try Now',
+        'cta.title': 'See it on your next interview',
+        'cta.subtitle': 'Live demo with a sample interview. No setup, no credit card.',
+        'cta.button': 'Launch demo',
         
         // Footer
         'footer.tagline': 'Enterprise-grade AI content detection for the modern world.',
@@ -340,8 +426,8 @@ const translations = {
     }
 };
 
-// Current language (default: Turkish)
-let currentLang = localStorage.getItem('lang') || 'tr';
+// Current language (default: English)
+let currentLang = localStorage.getItem('lang') || 'en';
 
 // Apply translations
 function applyTranslations(lang) {

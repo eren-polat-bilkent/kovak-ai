@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV &amp; SOP AI Detection (Beta) — CyberShieldAI HR Suite</title>
+    <link rel="stylesheet" href="css/hr-suite.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="hr-page">
+
+    <!-- ===== Top nav ===== -->
+    <nav class="hr-nav">
+        <div class="hr-nav-inner">
+            <a href="index.html" class="hr-logo">
+                <span class="hr-logo-mark"><i class="fas fa-shield-halved"></i></span>
+                <span>CyberShieldAI <span style="color: var(--hr-text-soft); font-weight: 500;">· HR&nbsp;Suite</span></span>
+            </a>
+            <div class="hr-nav-links">
+                <a href="speech.html" class="hr-nav-link">Speech</a>
+                <a href="cv-check.html" class="hr-nav-link active">CV &amp; SOP</a>
+                <a href="index.html" class="hr-nav-link">Interview platform</a>
+                <a href="contact.html" class="hr-btn-cta">Book a pilot</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header class="hr-hero">
+        <div class="hr-container">
+            <div class="hr-hero-inner">
+                <div>
+                    <span class="hr-eyebrow beta"><i class="fas fa-flask"></i> Beta plugin · For HR teams</span>
+                    <h1 class="hr-title">Catch AI-written CVs &amp; SOPs <span class="hr-title-accent">before the interview.</span></h1>
+                    <p class="hr-subtitle">Drop a CV, cover letter, or statement of purpose. We score it for AI generation, surface boilerplate phrasing, and give your recruiters concrete questions to verify each suspect claim.</p>
+                </div>
+                <div class="hr-hero-actions">
+                    <button class="hr-btn hr-btn-ghost"><i class="fas fa-arrow-up-from-bracket"></i> Upload another</button>
+                    <button class="hr-btn hr-btn-primary"><i class="fas fa-file-pdf"></i> Export PDF report</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Analysis body ===== -->
+    <main class="hr-section">
+        <div class="hr-container">
+            <div class="hr-grid-2">
+
+                <!-- ===== LEFT — document preview ===== -->
+                <section class="hr-card">
+                    <div class="hr-doc-toolbar">
+                        <div class="hr-doc-file">
+                            <div class="hr-doc-icon"><i class="fas fa-file-lines"></i></div>
+                            <div>
+                                <div class="hr-doc-name">Lara_Demir_CV.pdf</div>
+                                <div class="hr-doc-sub">238&nbsp;KB · 1 page · uploaded 2 min ago</div>
+                            </div>
+                        </div>
+                        <div class="hr-doc-actions">
+                            <button class="hr-btn hr-btn-ghost"><i class="fas fa-magnifying-glass-chart"></i> Re-analyze</button>
+                            <button class="hr-btn hr-btn-ghost"><i class="fas fa-download"></i> Original</button>
+                        </div>
+                    </div>
+
+                    <article class="hr-doc-page">
+
+                        <header>
+                            <h2 class="hr-cv-name">Lara Demir</h2>
+                            <div class="hr-cv-contact">
+                                <span>Backend Engineer</span>
+                                <span>·</span>
+                                <span>İstanbul, TR</span>
+                                <span>·</span>
+                                <span>lara.demir@email.com</span>
+                                <span>·</span>
+                                <span>linkedin.com/in/lara-demir</span>
+                            </div>
+                        </header>
+
+                        <!-- Summary (high AI) -->
+                        <section class="hr-cv-section">
+                            <h4>Professional Summary</h4>
+                            <div class="hr-ai-block">
+                                <span class="hr-ai-tag">AI 94%</span>
+                                <p>Results-driven backend engineer with a proven track record of designing scalable, fault-tolerant distributed systems. Demonstrated expertise in leveraging cutting-edge technologies to deliver high-impact business outcomes while fostering cross-functional collaboration and continuous improvement.</p>
+                            </div>
+                        </section>
+
+                        <!-- Experience -->
+                        <section class="hr-cv-section">
+                            <h4>Experience</h4>
+
+                            <div class="hr-cv-entry">
+                                <div class="hr-cv-entry-head">
+                                    <span class="hr-cv-role">Backend Engineer · FintechCo</span>
+                                    <span class="hr-cv-when">2023 – Present</span>
+                                </div>
+                                <div class="hr-cv-org">Reconciliation &amp; payments platform</div>
+                                <div class="hr-ai-block medium">
+                                    <span class="hr-ai-tag">AI 71%</span>
+                                    <ul>
+                                        <li>Spearheaded the re-architecting of a legacy batch system into a real-time streaming pipeline, leveraging Kafka and idempotent consumers to achieve sub-second latency.</li>
+                                        <li>Orchestrated cross-functional initiatives to drive operational excellence and ensure regulatory compliance across multiple stakeholders.</li>
+                                    </ul>
+                                </div>
+                                <ul>
+                                    <li>On-call rotation for the EU payments cluster; cut p95 dispute resolution time from 14&nbsp;h to 2&nbsp;h after rewriting the partition-lag dashboard with the SRE team.</li>
+                                    <li>Wrote the post-mortem for the 2024-08-14 settlement outage (root cause: Avro schema drift on the EUR topic).</li>
+                                </ul>
+                            </div>
+
+                            <div class="hr-cv-entry">
+                                <div class="hr-cv-entry-head">
+                                    <span class="hr-cv-role">Software Engineering Intern · A Fintech Startup</span>
+                                    <span class="hr-cv-when">Summer 2022</span>
+                                </div>
+                                <div class="hr-cv-org">Internship · 3 months</div>
+                                <ul>
+                                    <li>Built an internal CLI that wrapped the merchant onboarding API, used by 6 ops staff daily.</li>
+                                    <li>Migrated 11 cron jobs from Jenkins to GitHub Actions; mentored by Hakan&nbsp;K.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Education -->
+                        <section class="hr-cv-section">
+                            <h4>Education</h4>
+                            <div class="hr-cv-entry">
+                                <div class="hr-cv-entry-head">
+                                    <span class="hr-cv-role">B.Sc. Computer Engineering · Bilkent University</span>
+                                    <span class="hr-cv-when">2019 – 2023</span>
+                                </div>
+                                <ul>
+                                    <li>GPA 3.41 / 4.00. Senior project: low-latency order book in Rust.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Skills (mostly genuine) -->
+                        <section class="hr-cv-section">
+                            <h4>Skills</h4>
+                            <ul>
+                                <li>Languages: Go, Python, Rust, TypeScript</li>
+                                <li>Infra: Kafka, PostgreSQL, Redis, Kubernetes, Terraform</li>
+                                <li>Observability: Grafana, Prometheus, OpenTelemetry</li>
+                            </ul>
+                        </section>
+
+                        <!-- Statement of purpose excerpt (very high AI) -->
+                        <section class="hr-cv-section">
+                            <h4>Statement of Purpose <span style="color:var(--hr-text-soft); font-weight:500;">(attached cover letter excerpt)</span></h4>
+                            <div class="hr-ai-block">
+                                <span class="hr-ai-tag">AI 97%</span>
+                                <p>Throughout my journey as an engineer, I have cultivated a deep appreciation for the intersection of technical rigor and human-centered design. It is with great enthusiasm that I submit my application — I am confident that my multifaceted background, combined with my unwavering commitment to excellence, will enable me to make a meaningful contribution to your esteemed organization.</p>
+                            </div>
+                        </section>
+
+                    </article>
+                </section>
+
+                <!-- ===== RIGHT — analysis summary ===== -->
+                <div class="hr-stack">
+
+                    <!-- Overall score -->
+                    <section class="hr-card hr-gauge-card">
+                        <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--hr-text-soft);">Overall AI-generation likelihood</div>
+                        <div class="hr-gauge" style="--val: 73; --color: var(--hr-warning);">
+                            <div class="hr-gauge-inner">
+                                <span class="hr-gauge-value">73</span>
+                                <span class="hr-gauge-suffix">/ 100</span>
+                            </div>
+                        </div>
+                        <div class="hr-gauge-label">Document is partly authentic but contains heavy AI-assisted sections.</div>
+                        <div class="hr-gauge-verdict" style="color: var(--hr-warning);">Heavily AI-assisted</div>
+                        <div style="display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap;">
+                            <span class="hr-pill high"><span class="dot"></span> SOP fully AI</span>
+                            <span class="hr-pill medium"><span class="dot"></span> Mixed CV body</span>
+                            <span class="hr-pill low"><span class="dot"></span> Skills authentic</span>
+                        </div>
+                    </section>
+
+                    <!-- Per-section breakdown -->
+                    <section class="hr-card">
+                        <div class="hr-card-header">
+                            <div class="hr-card-title"><i class="fas fa-list-check"></i> Per-section AI score</div>
+                            <span class="hr-card-meta">Higher = more AI-like</span>
+                        </div>
+                        <div style="padding: 6px 22px 18px;">
+
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Professional Summary</span>
+                                <span class="hr-breakdown-pct danger">94%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill danger" style="width:94%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Experience — FintechCo (bullet 1–2)</span>
+                                <span class="hr-breakdown-pct warn">71%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill warn" style="width:71%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Experience — FintechCo (bullet 3–4)</span>
+                                <span class="hr-breakdown-pct ok">14%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill ok" style="width:14%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Experience — Internship</span>
+                                <span class="hr-breakdown-pct ok">9%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill ok" style="width:9%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Education</span>
+                                <span class="hr-breakdown-pct ok">6%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill ok" style="width:6%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Skills</span>
+                                <span class="hr-breakdown-pct ok">3%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill ok" style="width:3%"></div></div>
+                            </div>
+                            <div class="hr-breakdown-row">
+                                <span class="hr-breakdown-name">Statement of Purpose</span>
+                                <span class="hr-breakdown-pct danger">97%</span>
+                                <div class="hr-bar"><div class="hr-bar-fill danger" style="width:97%"></div></div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Top signals -->
+                    <section class="hr-card">
+                        <div class="hr-card-header">
+                            <div class="hr-card-title"><i class="fas fa-magnifying-glass-chart"></i> Top signals</div>
+                            <span class="hr-card-meta">What triggered the score</span>
+                        </div>
+                        <div class="hr-chips">
+                            <span class="hr-chip danger"><i class="fas fa-flag"></i> “Results-driven”</span>
+                            <span class="hr-chip danger"><i class="fas fa-flag"></i> “Proven track record”</span>
+                            <span class="hr-chip danger"><i class="fas fa-flag"></i> “Multifaceted background”</span>
+                            <span class="hr-chip warn"><i class="fas fa-flag"></i> “Cross-functional collaboration”</span>
+                            <span class="hr-chip warn"><i class="fas fa-flag"></i> “Cutting-edge technologies”</span>
+                            <span class="hr-chip warn"><i class="fas fa-flag"></i> “Esteemed organization”</span>
+                            <span class="hr-chip"><i class="fas fa-text-width"></i> Burstiness · 0.19 (low)</span>
+                            <span class="hr-chip"><i class="fas fa-chart-line"></i> Perplexity · 9.8</span>
+                            <span class="hr-chip"><i class="fas fa-arrows-left-right"></i> Vocabulary uniformity · high</span>
+                        </div>
+                    </section>
+
+                    <!-- HR recommendations -->
+                    <section class="hr-card">
+                        <div class="hr-card-header">
+                            <div class="hr-card-title"><i class="fas fa-user-tie"></i> Recommendations for HR</div>
+                        </div>
+                        <ul class="hr-rec-list">
+                            <li><i class="fas fa-circle-check"></i> Ask the candidate to describe the FintechCo reconciliation rewrite in their own words — bullets 1–2 read as AI-rewritten.</li>
+                            <li><i class="fas fa-circle-check"></i> Probe the 2024-08-14 settlement outage and the Avro schema drift detail — those bullets scored authentic and should be easy to expand.</li>
+                            <li><i class="fas fa-circle-check"></i> Skip the cover letter as a signal; treat it as boilerplate and ask why they want the role live.</li>
+                            <li><i class="fas fa-circle-check"></i> Verify “Senior project: low-latency order book in Rust” with a short technical follow-up.</li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="hr-footer">
+        <div class="hr-footer-inner">
+            <span>&copy; 2026 CyberShieldAI · HR Suite preview · CV &amp; SOP detection (beta)</span>
+            <span>Demo with mock data. Always combine with a human review.</span>
+        </div>
+    </footer>
+
+</body>
+</html>

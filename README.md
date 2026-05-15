@@ -6,9 +6,9 @@ Deepfake ve yapay zeka ile üretilmiş içerikleri tespit eden web platformu.
 
 ## Demo
 
-**[Canlı Demo →](https://cybershieldai.github.io/cybershield-ai)**
+**[Canlı Demo →](https://bilkent-cybershield-ai.github.io/ai/)**
 
-🌐 **Web Sitesi:** https://cybershieldai.github.io/cybershield-ai
+🌐 **Web Sitesi:** https://bilkent-cybershield-ai.github.io/ai/
 
 ## Özellikler
 
